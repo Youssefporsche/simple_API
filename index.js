@@ -2,20 +2,20 @@ import express, { json } from 'express';
 const app = express(); // allows for different http routes
 
 // const port = process.env.PORT || 5000 ;
-
+ const port = 5000 ;
 //const stripe = require('stripe')('sk_test_YOUR_KEY');
 app.use(json());
 
 app.post('/api/add', async (req, res) => {
 
-    const API_Key  = req.query.apiKey;
+    //const API_Key  = req.query.apiKey;
 
     var a = req.body.firstNumber ;
     var b = req.body.seconedNumber ;
   
-    if (!API_Key) {
-      res.sendStatus(400); // bad request
-    }
+    // if (!API_Key) {
+    //   res.sendStatus(400); // bad request
+    // }
   
     // TODO validate apiKey
   
@@ -23,4 +23,4 @@ app.post('/api/add', async (req, res) => {
   
   });
 
-app.listen(  5000 , () => console.log('Server is running now'));
+app.listen(  port , () => console.log('Server is running now on port ' + port));
