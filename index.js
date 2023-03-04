@@ -23,4 +23,16 @@ app.post('/api/add', async (req, res) => {
   
   });
 
+  app.post('/add/:num1/:num2/:num3', async (req, res) => {
+    
+    var a = parseInt(req.params.num1) ;
+    var b = parseInt(req.params.num2) ;
+    var c = parseInt(req.params.num3) ;
+    const res = a+b*c ;
+
+    res.send("The result is : " + (parseInt(res)) )
+  
+   });
+
+
 app.listen(  port , () => console.log('Server is running now on port ' + port));
