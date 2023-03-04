@@ -18,8 +18,8 @@ app.post('/api/add', async (req, res) => {
     // }
   
     // TODO validate apiKey
-  
-    res.send({ data: a+b});
+  res.send("The summation result is : " + (a+b) )
+    
   
   });
 
