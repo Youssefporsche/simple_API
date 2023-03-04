@@ -28,9 +28,9 @@ app.post('/api/add', async (req, res) => {
     var a = parseInt(req.params.num1) ;
     var b = parseInt(req.params.num2) ;
     var c = parseInt(req.params.num3) ;
-    const res = a+b*c ;
+    const operation = a+b*c ;
 
-    res.send("The result is : " + (parseInt(res)) )
+    res.send("The result is : " + (parseInt(operation)) )
   
    });
 
